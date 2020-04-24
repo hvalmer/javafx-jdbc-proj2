@@ -28,6 +28,15 @@ public class Utils {
 			return null;
 		}
 	}
+	
+	//transformando String em Double no BaseSalary
+	public static Double tryParseToDouble(String str) {
+		try {
+			return Double.parseDouble(str);
+		} catch (NumberFormatException e) {
+			return null;
+		}
+	}
 
 	public static <T> void formatTableColumnDate(TableColumn<T, Date> tableColumn, String format) {
 		tableColumn.setCellFactory(column -> {
